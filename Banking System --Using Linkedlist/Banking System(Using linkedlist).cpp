@@ -30,7 +30,7 @@ void insert()
 	int value1;
 	char ch[100];
 	printf("\n\t\tEnter the name:- ");
-	scanf("%s",temp->name);
+	scanf("\n%[^\n]s",temp->name);
 	printf("\n\t\tEnter the Adahar no.:- ");
 	scanf("%d",&value1);
 	
@@ -63,10 +63,10 @@ void insert()
 		temp->adhar=value1;
 		fflush(stdin);
 		printf("\n\t\tEnter the profession:- ");
-		scanf("%s",temp->profession);
+		scanf("\n%[^\n]s",temp->profession);
 		fflush(stdin);
 		printf("\n\t\tEnter the address:- ");
-		scanf("%s",temp->address);
+		scanf("\n%[^\n]s",temp->address);
 		fflush(stdin);
 		printf("\n\t\t1000 diposited in this account\n ");
 		temp->balance=1000;
@@ -267,7 +267,7 @@ void viewlist()
 		view=start;
 		while(view!=NULL)
 		{
-		printf("\n\t\t[*Information of Client no. %d]",count);
+		printf("\n\t\t[*Information of Client no. %d]\n",count);
 		printf("\n\t\tName :- ");
 		printf("%s",view->name);
 		printf("\n\t\tAdhar No. :- ");
